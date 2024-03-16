@@ -15,8 +15,9 @@ function App() {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: +value });
   };
-
   console.log(formData)
+  //enforcing positive value for duration
+  const inputIsValid = formData.duration >= 1;
 
   return (
     <>
@@ -33,7 +34,8 @@ function App() {
         <calculateInvestmentResults/>
 
         {/* R E S U L T */}
-        <Results input={formData}/>
+        {!inputIsValid && < p className="center">Please enter a duraion greater than zero. </p> }
+        {inputIsValid && <Results input={formData}/>}
     </>
   )// we need to state the data it is time to use this input to make - to 
 }

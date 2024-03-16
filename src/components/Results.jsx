@@ -3,7 +3,7 @@ import { calculateInvestmentResults , formatter} from '../util/investment'
 
 export const Results = ({input}) => {
     const outputData = calculateInvestmentResults(input)
-    const initialInvestment = outputData[0].valueEndOfYear - outputData[0].interest - outputData[0].annualInvestment
+    const initialInvestment = outputData.valueEndOfYear - outputData.interest - outputData.annualInvestment
 
   return (
     <>
@@ -21,13 +21,14 @@ export const Results = ({input}) => {
         <tbody>
             {outputData.map(yearData => {
                 const totalInterest = yearData.valueEndOfYear - yearData.annualInvestment * yearData.year
+                const totalAmounInvested = yearData.valueEndOfYear - totalInterest
 
                 return <tr key={yearData.year }>
                     <td>{yearData.year}</td>
                     <td>{formatter.format(yearData.valueEndOfYear)}</td>
                     <td>{formatter.format(yearData.interest)}</td>
                     <td>{formatter.format(totalInterest)}</td>
-                    <td></td>
+                    <td>{formatter.format(totalAmounInvested)}</td>
                 </tr>
             })}
         </tbody>
