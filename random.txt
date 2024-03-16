@@ -6,3 +6,9 @@ the vievers of this channel are rn the guys who so study with me kind of stuff s
     - getting vievers and having a fuctional channel is not a main line of concern today
     - this is not going to make any differene so am better of without getting viervers
     - aiiming for viervers is not the main concern of this channel
+
+even.target.value
+    - we will always get a string 
+    - even if the type of the string is set to be number 
+
+    -

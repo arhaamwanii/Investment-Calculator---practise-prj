@@ -1,6 +1,7 @@
 import React, {  useState } from 'react';
 import Input from './components/Input.jsx';
 import { calculateInvestmentResults } from './util/investment.js';
+import { Results } from './components/Results';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -12,7 +13,7 @@ function App() {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({ ...formData, [name]: +value });
   };
 
   console.log(formData)
@@ -30,6 +31,9 @@ function App() {
         </div>
         </div>
         <calculateInvestmentResults/>
+
+        {/* R E S U L T */}
+        <Results input={formData}/>
     </>
   )// we need to state the data it is time to use this input to make - to 
 }
