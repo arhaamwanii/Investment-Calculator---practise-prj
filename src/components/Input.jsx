@@ -4,7 +4,7 @@ const Input = ({recievedLabel , sentInput }) => {
   return (
     <>
         <label htmlFor={recievedLabel} >{recievedLabel}</label>
-        <input name={recievedLabel}  type="number" onChange={sentInput} required/>
+        <input  name={recievedLabel}  type="number" onChange={sentInput} required/>
     </>
   )
 }

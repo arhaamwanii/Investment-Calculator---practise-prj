@@ -10,5 +10,13 @@ the vievers of this channel are rn the guys who so study with me kind of stuff s
 even.target.value
     - we will always get a string 
     - even if the type of the string is set to be number 
+    
+    - simply adding a + before crearting/entering the vlaue into the object will ensure that i value is a number
+        setFormData({ ...formData, [name]: +value });
+    
+THIS WAS USED TO CREATE A NEW OBJECT 
 
-    -
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: +value });
+  };
