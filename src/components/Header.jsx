@@ -9,3 +9,6 @@ export const Header = () => {
 
   )
 }
+
+//that is the thing - if you try to win at everything you will loose at everything
+
