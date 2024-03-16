@@ -3,8 +3,8 @@ import React from 'react'
 const Input = ({recievedLabel , sentInput }) => {
   return (
     <>
-        <label htmlFor={recievedLabel}>{recievedLabel}</label>
-        <input name={recievedLabel}  type="number" onChange={sentInput}/>
+        <label htmlFor={recievedLabel} >{recievedLabel}</label>
+        <input name={recievedLabel}  type="number" onChange={sentInput} required/>
     </>
   )
 }

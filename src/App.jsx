@@ -1,5 +1,6 @@
 import React, {  useState } from 'react';
 import Input from './components/Input.jsx';
+import { calculateInvestmentResults } from './util/investment.js';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -20,16 +21,17 @@ function App() {
     <>
       <div id='user-input'>
         <div className='input-group'> 
-          <Input recievedLabel={"Initial Investment"} sentInput={handleInputChange} />
-          <Input recievedLabel={"Expected Reuturn"} sentInput={handleInputChange} />
+          <Input recievedLabel={"initialInvestment"} sentInput={handleInputChange} />
+          <Input recievedLabel={"annualInvestment"} sentInput={handleInputChange} />
         </div>
         <div className='input-group'>
-          <Input recievedLabel={"Annual Invesmtment"} sentInput={handleInputChange} />
-          <Input recievedLabel={"Duration"} sentInput={handleInputChange} />
+          <Input recievedLabel={"expectedReturn"} sentInput={handleInputChange} />
+          <Input recievedLabel={"duration"} sentInput={handleInputChange} />
         </div>
         </div>
+        <calculateInvestmentResults/>
     </>
-  )
+  )// we need to state the data it is time to use this input to make - to 
 }
 
 export default App
